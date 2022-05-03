@@ -1,18 +1,18 @@
 import axios from 'axios';
 
-export const getGif = async (search, query) => {
+export const getGif = async (type = 'trending', q) => {
+	console.log(type, q);
 	try {
-		const {
-			data: { data },
-		} = await axios.get(`api.giphy.com/v1/gifs/${search}`, {
+		const res = await axios(`https://api.giphy.com/v1/gifs/${type}`, {
 			params: {
-				api_key: process.env.REACT_APP_GIF_API,
+				api_key: 'VQEc83glUtxwtUnUjvnpIOkuXOwBop5j',
 				rating: 'g',
 				limit: 10,
-				q: query,
+				q: q,
 			},
 		});
-		return data;
+
+		return res.data.data;
 	} catch (error) {
 		console.log(error);
 	}
