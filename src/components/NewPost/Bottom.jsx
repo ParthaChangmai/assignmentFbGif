@@ -3,7 +3,7 @@ import SearchGif from './SearchGif';
 
 function Bottom() {
 	const [gifCard, setGifCard] = useState(false);
-	const [selectedGif, setSelectedGif] = useState('');
+	const [selectedGif, setSelectedGif] = useState(null);
 	const [selectedGifAlt, setSelectedGifAlt] = useState('');
 
 	const handleSelectedGif = (image, alt) => {
@@ -14,7 +14,7 @@ function Bottom() {
 
 	return (
 		<>
-			{
+			{selectedGif && (
 				<div className="mx-auto">
 					<img
 						className="max-h-[250px]"
@@ -22,9 +22,9 @@ function Bottom() {
 						alt={selectedGifAlt}
 					/>
 				</div>
-			}
+			)}
 			<div className="grid grid-cols-2 items-center">
-				<div className="flex flex-col gap-2 my-2 mr-5">
+				<div className="flex flex-col gap-2 my-2 mr-5 ml-4">
 					<div className="bg-gray-100 flex py-1 px-11 py-1 rounded-xl hover:bg-gray-200 cursor-pointer ">
 						<svg
 							width="24px"
@@ -57,7 +57,7 @@ function Bottom() {
 						{gifCard && <SearchGif getSingleGif={handleSelectedGif} />}
 					</div>
 				</div>
-				<div className="flex flex-col gap-2 ml-5">
+				<div className="flex flex-col gap-2 ml-5 mr-4">
 					<div className="bg-gray-100 flex  px-11 py-1 rounded-xl hover:bg-gray-200 cursor-pointer">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ function Bottom() {
 						</svg>
 						<span className="font-medium pl-1">Check In</span>
 					</div>
-					<div className="bg-gray-100 flex  px-11 py-1 rounded-xl hover:bg-gray-200 cursor-pointer">
+					<div className="bg-gray-100 flex  px-11 py-1 rounded-xl hover:bg-gray-200 cursor-pointer ">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24px"
