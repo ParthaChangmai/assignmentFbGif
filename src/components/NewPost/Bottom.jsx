@@ -15,12 +15,18 @@ function Bottom() {
 	return (
 		<>
 			{selectedGif && (
-				<div className="mx-auto">
+				<div className="mx-auto flex relative">
 					<img
 						className="max-h-[250px]"
 						src={selectedGif}
 						alt={selectedGifAlt}
 					/>
+					<div
+						onClick={() => setSelectedGif(null)}
+						className="relative opacity-40 hover:opacity-100 -left-6 cursor-pointer"
+					>
+						&#10006;
+					</div>
 				</div>
 			)}
 			<div className="grid grid-cols-2 items-center">
