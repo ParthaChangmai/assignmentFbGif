@@ -15,5 +15,6 @@ export const getGif = async (type = 'trending', q) => {
 		return res.data.data;
 	} catch (error) {
 		console.log(error);
+		alert('Error loading Gifs');
 	}
 };
