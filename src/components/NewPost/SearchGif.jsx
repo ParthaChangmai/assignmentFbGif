@@ -24,6 +24,7 @@ const SearchGif = (props) => {
 			});
 		}
 	}, [searchGif]);
+	console.log(gifData);
 
 	return (
 		<>
@@ -45,7 +46,7 @@ const SearchGif = (props) => {
 							key={gif.id}
 							alt={gif.title}
 							onClick={() =>
-								props.getSingleGif(gif.images.downsized.url, gif.title)
+								props.getSingleGif(gif.images.downsized_large.url, gif.title)
 							}
 						/>
 					))}
