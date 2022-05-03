@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { getGif } from '../../api';
-import RenderGifs from './RenderGifs';
 
 const SearchGif = () => {
 	const [gifData, setGifData] = useState([]);
 	const [searchGif, setSearchGif] = useState('');
+	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
+		setIsLoading(true);
 		if (searchGif === '') {
 			getGif().then((data) => {
 				setGifData(data);
+				setIsLoading(false);
 			});
 		} else {
 			getGif('search', { searchGif }).then((data) => {
 				setGifData(data);
+				setIsLoading(false);
 			});
 		}
 	}, [searchGif]);
@@ -30,9 +33,15 @@ const SearchGif = () => {
 					value={searchGif}
 					onChange={(e) => setSearchGif(e.target.value)}
 				/>
+				{isLoading && <div>Loading...</div>}
 				<div className="flex flex-col gap-2">
 					{gifData.map((gif) => (
-						<img src={gif.images.downsized.url} key={gif.id} alt={gif.title} />
+						<img
+							className="rounded-md"
+							src={gif.images.downsized.url}
+							key={gif.id}
+							alt={gif.title}
+						/>
 					))}
 				</div>
 			</div>
