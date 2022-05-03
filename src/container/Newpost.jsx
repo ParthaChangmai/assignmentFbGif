@@ -1,6 +1,7 @@
 import React from 'react';
 import Bottom from '../components/NewPost/Bottom';
 import Header from '../components/NewPost/Header';
+import PostButton from '../components/NewPost/PostButton';
 import TextArea from '../components/NewPost/TextArea';
 
 const NewPost = () => {
@@ -9,6 +10,7 @@ const NewPost = () => {
 			<Header />
 			<TextArea />
 			<Bottom />
+			<PostButton />
 		</div>
 	);
 };
