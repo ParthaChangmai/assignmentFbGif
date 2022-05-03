@@ -4,7 +4,7 @@ function Header() {
 	return (
 		<>
 			<div className="flex justify-between p-2">
-				<div className="flex items-center gap-1">
+				<div className="flex items-center gap-1 cursor-pointer">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						className="w-9 h-9 text-gray-400"
@@ -17,16 +17,16 @@ function Header() {
 							clipRule="evenodd"
 						/>
 					</svg>
-					<div className="flex flex-col">
+					<div className="flex flex-col ">
 						<h3 className="text-sm font-semibold">Partha </h3>
-						<span className="flex items-center gap-1 text-xs text-gray-500">
-							<span>2022</span>
+						<span className="flex items-center gap-1 text-xs text-gray-500 ">
+							<span>05-05-2022</span>
 							<span>&#8226;</span>
-							{/* <CardPublicSVG /> */}
+							<span>&#127760;</span>
 						</span>
 					</div>
 				</div>
-				<div>{/* <Option /> */}</div>
+				<div className="text-2xl cursor-pointer">&#8230;</div>
 			</div>
 		</>
 	);
