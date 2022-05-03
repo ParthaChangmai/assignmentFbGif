@@ -4,7 +4,7 @@ const CommentDemo = () => {
 	return (
 		<>
 			<div className="flex justify-between p-2">
-				<div className="flex items-center gap-1">
+				<div className="flex items-center gap-1 cursor-pointer">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						className="w-9 h-9 text-gray-400"
