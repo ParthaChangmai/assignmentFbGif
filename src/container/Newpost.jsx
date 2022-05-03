@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Bottom from '../components/NewPost/Bottom';
 import Header from '../components/NewPost/Header';
 import TextArea from '../components/NewPost/TextArea';
