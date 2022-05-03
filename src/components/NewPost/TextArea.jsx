@@ -3,7 +3,7 @@ import React from 'react';
 function TextArea() {
 	return (
 		<>
-			<div className="flex gap-2 pl-2">
+			<div className="flex gap-2 pl-2 ">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					className="w-16 h-16 text-gray-400"
@@ -21,7 +21,7 @@ function TextArea() {
 					id="Post"
 					cols="20"
 					rows="5"
-					className="w-full h-32 border-none outline-none focus:outline-none focus:ring-0"
+					className="w-full h-32 border-none outline-none focus:outline-none focus:ring-0 mt-3"
 					placeholder="Whats on your mind ? "
 				/>
 			</div>
