@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const getGif = async (type = 'trending', q) => {
-	console.log(type, q);
 	try {
 		const res = await axios(`https://api.giphy.com/v1/gifs/${type}`, {
 			params: {
