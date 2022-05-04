@@ -42,11 +42,11 @@ const SearchGif = (props) => {
 					{gifData.map((gif) => (
 						<img
 							className="rounded-md"
-							src={gif.images.downsized.url}
+							src={gif.images.preview_gif.url}
 							key={gif.id}
 							alt={gif.title}
 							onClick={() =>
-								props.getSingleGif(gif.images.downsized_large.url, gif.title)
+								props.getSingleGif(gif.images.downsized.url, gif.title)
 							}
 						/>
 					))}
