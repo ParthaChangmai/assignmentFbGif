@@ -4,7 +4,7 @@ function Header() {
 	return (
 		<>
 			<div className="flex bg-gray-100 rounded-tl-lg rounded-tr-lg">
-				<div className="flex  gap-1 px-4 py-2 font-semibold cursor-pointer ">
+				<div className="flex  gap-1 px-1 py-2 font-semibold cursor-pointer ">
 					<svg
 						width="24px"
 						height="24px"
@@ -18,7 +18,7 @@ function Header() {
 					</svg>
 					<span className="border-r-2 border-grey-500 pr-5">Compose Post</span>
 				</div>
-				<div className="flex  gap-1 pl-0 py-2 font-semibold cursor-pointer ">
+				<div className="flex  gap-1 px-1 py-2 font-semibold cursor-pointer ">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24px"
@@ -38,7 +38,7 @@ function Header() {
 						Photos / Videos
 					</span>
 				</div>
-				<div className="flex  gap-1 px-4 py-2 font-semibold cursor-pointer ">
+				<div className="flex  gap-1 px-1 py-2 font-semibold cursor-pointer ">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24px"
