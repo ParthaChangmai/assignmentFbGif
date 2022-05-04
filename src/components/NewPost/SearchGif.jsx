@@ -15,16 +15,15 @@ const SearchGif = (props) => {
 			});
 		} else {
 			const timeout = setTimeout(() => {
-				getGif('search', { searchGif }).then((data) => {
+				getGif('search', searchGif).then((data) => {
 					setGifData(data);
 					setIsLoading(false);
-				}, 500);
+				}, 5000);
 
 				return () => clearTimeout(timeout);
 			});
 		}
 	}, [searchGif]);
-	console.log(gifData);
 
 	return (
 		<>
