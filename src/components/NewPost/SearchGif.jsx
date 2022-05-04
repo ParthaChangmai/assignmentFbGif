@@ -18,7 +18,7 @@ const SearchGif = (props) => {
 				getGif('search', searchGif).then((data) => {
 					setGifData(data);
 					setIsLoading(false);
-				}, 5000);
+				}, 500);
 
 				return () => clearTimeout(timeout);
 			});
