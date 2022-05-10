@@ -8,6 +8,7 @@ const SearchGif = (props) => {
 
 	useEffect(() => {
 		setIsLoading(true);
+
 		if (searchGif === '') {
 			getGif().then((data) => {
 				setGifData(data);
@@ -18,10 +19,10 @@ const SearchGif = (props) => {
 				getGif('search', searchGif).then((data) => {
 					setGifData(data);
 					setIsLoading(false);
-				}, 500);
+				});
+			}, 500);
 
-				return () => clearTimeout(timeout);
-			});
+			return () => clearTimeout(timeout);
 		}
 	}, [searchGif]);
 
